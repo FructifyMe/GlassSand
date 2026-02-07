@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Specifications: PGS-100 | Fructify LLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Inter:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Merriweather', serif;
+            color: #1e293b;
+            background-color: #f1f5f9;
+        }
+        .sans {
+            font-family: 'Inter', sans-serif;
+        }
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .page {
+            background: white;
+            max-width: 210mm;
+            margin: 40px auto;
+            padding: 20mm;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+        }
+        th {
+            border-bottom: 2px solid #334155;
+            text-align: left;
+            padding: 8px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+        td {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 8px;
+            color: #475569;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        @media print {
+            body {
+                background: none;
+            }
+            .page {
+                box-shadow: none;
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                max-width: none;
+            }
+            .no-print {
+                display: none;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Print/Download Control -->
+    <div class="no-print fixed top-6 right-6 z-50 flex gap-2">
+        <a href="glass_pulverizer_strategy.html" class="bg-slate-800 text-white px-4 py-2 rounded shadow hover:bg-slate-700 sans text-sm transition">
+            <i class="fa-solid fa-arrow-left mr-2"></i> Back to Strategy
+        </a>
+        <button onclick="window.print()" class="bg-emerald-600 text-white px-4 py-2 rounded shadow hover:bg-emerald-500 sans text-sm transition">
+            <i class="fa-solid fa-print mr-2"></i> Print to PDF
+        </button>
+    </div>
+
+    <!-- Page 1: Overview & Chemical -->
+    <div class="page">
+        <!-- Header -->
+        <header class="border-b-4 border-emerald-600 pb-6 mb-10 flex justify-between items-end">
+            <div>
+                <h1 class="text-3xl font-bold text-slate-900 leading-tight">Technical Specifications:<br>Pulverized Glass Aggregate (PGS-100)</h1>
+                <p class="text-slate-500 italic mt-2">Material Characterization & Application Data</p>
+            </div>
+            <div class="text-right">
+                <div class="flex items-center gap-2 justify-end mb-1">
+                    <i class="fa-solid fa-leaf text-emerald-600"></i>
+                    <span class="font-bold sans text-slate-900">Fructify LLC</span>
+                </div>
+                <p class="mono text-xs text-slate-400">DOC ID: FRUC-PGS-2024-V1</p>
+                <p class="mono text-xs text-slate-400">DATE: 2024-10-24</p>
+            </div>
+        </header>
+
+        <!-- Executive Summary -->
+        <section class="mb-10">
+            <h2 class="sans text-sm font-bold uppercase tracking-widest text-emerald-700 mb-3 border-b border-slate-200 pb-1">1.0 Executive Summary</h2>
+            <p class="text-sm leading-relaxed text-justify">
+                This document provides technical analysis for <strong>PGS-100 (Pulverized Glass Sand)</strong>, an amorphous silicate aggregate derived from post-consumer soda-lime glass. Processed via impact crushing and screening, PGS-100 is engineered to replace natural sand in civil engineering, filtration, and agricultural applications. The material is chemically inert, non-hazardous, and free of sharp edges due to the tumbling action during processing.
+            </p>
+        </section>
+
+        <!-- Material Properties -->
+        <section class="mb-10">
+            <h2 class="sans text-sm font-bold uppercase tracking-widest text-emerald-700 mb-3 border-b border-slate-200 pb-1">2.0 Material Properties</h2>
+            
+            <div class="grid grid-cols-2 gap-8">
+                <div>
+                    <h3 class="sans text-xs font-bold text-slate-900 mb-2">2.1 Physical Characteristics</h3>
+                    <table>
+                        <tr>
+                            <td>Specific Gravity</td>
+                            <td class="mono text-right">2.48 - 2.52</td>
+                        </tr>
+                        <tr>
+                            <td>Bulk Density (Loose)</td>
+                            <td class="mono text-right">75 lb/ft³</td>
+                        </tr>
+                        <tr>
+                            <td>Bulk Density (Compacted)</td>
+                            <td class="mono text-right">110 lb/ft³</td>
+                        </tr>
+                        <tr>
+                            <td>Permeability (k)</td>
+                            <td class="mono text-right">3.5 x 10⁻² cm/sec</td>
+                        </tr>
+                        <tr>
+                            <td>Angularity</td>
+                            <td class="mono text-right">Sub-angular</td>
+                        </tr>
+                        <tr>
+                            <td>Mohs Hardness</td>
+                            <td class="mono text-right">5.5 - 6.0</td>
+                        </tr>
+                    </table>
+                </div>
+                <div>
+                    <h3 class="sans text-xs font-bold text-slate-900 mb-2">2.2 Chemical Composition (Typical)</h3>
+                    <table>
+                        <tr>
+                            <td>Silica (SiO₂)</td>
+                            <td class="mono text-right">70 - 74%</td>
+                        </tr>
+                        <tr>
+                            <td>Sodium Oxide (Na₂O)</td>
+                            <td class="mono text-right">12 - 16%</td>
+                        </tr>
+                        <tr>
+                            <td>Calcium Oxide (CaO)</td>
+                            <td class="mono text-right">10 - 14%</td>
+                        </tr>
+                        <tr>
+                            <td>Aluminum Oxide (Al₂O₃)</td>
+                            <td class="mono text-right">1 - 2%</td>
+                        </tr>
+                        <tr>
+                            <td>Heavy Metals</td>
+                            <td class="mono text-right">&lt; Detectable Limits</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p class="text-xs text-slate-500 mt-2 italic">* Tested in accordance with ASTM C1260 and AASHTO T-26.</p>
+        </section>
+        
+        <!-- Contamination -->
+        <section>
+            <h2 class="sans text-sm font-bold uppercase tracking-widest text-emerald-700 mb-3 border-b border-slate-200 pb-1">3.0 Impurity Analysis (Cleanliness)</h2>
+            <p class="text-sm mb-4">
+                Feedstock undergoes optical sorting and cyclone separation. Final product specifications for non-glass residue (NGR):
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="w-1/2">Contaminant Type</th>
+                        <th class="w-1/4 text-right">Tolerance Limit</th>
+                        <th class="w-1/4 text-right">Test Method</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Paper / Organic Fiber</td>
+                        <td class="mono text-right">&lt; 0.5%</td>
+                        <td class="mono text-right">AGCI-102</td>
+                    </tr>
+                    <tr>
+                        <td>Ferrous Metals</td>
+                        <td class="mono text-right">&lt; 0.01%</td>
+                        <td class="mono text-right">Magnetic Sep.</td>
+                    </tr>
+                    <tr>
+                        <td>Plastics / Synthetics</td>
+                        <td class="mono text-right">&lt; 0.2%</td>
+                        <td class="mono text-right">Visual/Float</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Footer Page 1 -->
+        <footer class="mt-12 pt-4 border-t border-slate-200 flex justify-between text-[10px] text-slate-400 sans">
+            <span>Fructify LLC | Strategic Material Analysis</span>
+            <span>Page 1 of 2</span>
+        </footer>
+    </div>
+
+    <!-- Page 2: Sieve Analysis & Applications -->
+    <div class="page page-break">
+        <!-- Header Page 2 -->
+        <div class="flex justify-between items-center mb-10 pb-4 border-b border-slate-200">
+            <span class="font-bold text-slate-400 text-sm">PGS-100 Specifications</span>
+            <span class="text-slate-300 mono text-xs">FRUC-PGS-2024-V1</span>
+        </div>
+
+        <!-- Sieve Analysis -->
+        <section class="mb-10">
+            <h2 class="sans text-sm font-bold uppercase tracking-widest text-emerald-700 mb-3 border-b border-slate-200 pb-1">4.0 Gradation & Sieve Analysis</h2>
+            <p class="text-sm mb-4">
+                Particle size distribution verified against ASTM C136 (Standard Test Method for Sieve Analysis of Fine and Coarse Aggregates).
+            </p>
+            
+            <h3 class="sans text-xs font-bold text-slate-900 mb-2">4.1 Grade: PGS-Fine (Filtration & Beach Compatibility)</h3>
+            <table class="text-sm">
+                <thead>
+                    <tr class="bg-slate-50">
+                        <th>Sieve Size (US Standard)</th>
+                        <th>Opening (mm)</th>
+                        <th class="text-right">% Passing (Cumulative)</th>
+                        <th class="text-right">Spec Range</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#4</td>
+                        <td>4.75</td>
+                        <td class="mono text-right font-bold">100</td>
+                        <td class="mono text-right">100</td>
+                    </tr>
+                    <tr>
+                        <td>#8</td>
+                        <td>2.36</td>
+                        <td class="mono text-right font-bold">95</td>
+                        <td class="mono text-right">90 - 100</td>
+                    </tr>
+                    <tr>
+                        <td>#16</td>
+                        <td>1.18</td>
+                        <td class="mono text-right font-bold">72</td>
+                        <td class="mono text-right">60 - 85</td>
+                    </tr>
+                    <tr>
+                        <td>#30</td>
+                        <td>0.60</td>
+                        <td class="mono text-right font-bold">45</td>
+                        <td class="mono text-right">25 - 60</td>
+                    </tr>
+                    <tr>
+                        <td>#50</td>
+                        <td>0.30</td>
+                        <td class="mono text-right font-bold">18</td>
+                        <td class="mono text-right">10 - 30</td>
+                    </tr>
+                    <tr>
+                        <td>#100</td>
+                        <td>0.15</td>
+                        <td class="mono text-right font-bold">4</td>
+                        <td class="mono text-right">2 - 10</td>
+                    </tr>
+                    <tr>
+                        <td>#200</td>
+                        <td>0.075</td>
+                        <td class="mono text-right font-bold">1</td>
+                        <td class="mono text-right">0 - 5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Compliance -->
+        <section class="mb-10">
+            <h2 class="sans text-sm font-bold uppercase tracking-widest text-emerald-700 mb-3 border-b border-slate-200 pb-1">5.0 Regulatory & Environmental Compliance</h2>
+            
+            <div class="flex gap-4 mb-4">
+                <div class="flex-1 bg-slate-50 p-4 border border-slate-100 rounded">
+                    <h4 class="sans text-xs font-bold text-slate-900 mb-1">TCLP (Leaching) Status</h4>
+                    <p class="text-xs text-slate-600">
+                        Tested via EPA Method 1311. Results indicate non-hazardous classification. Lead and heavy metal leaching levels are below regulatory thresholds for groundwater safety.
+                    </p>
+                </div>
+                <div class="flex-1 bg-slate-50 p-4 border border-slate-100 rounded">
+                    <h4 class="sans text-xs font-bold text-slate-900 mb-1">Worker Safety (Silica)</h4>
+                    <p class="text-xs text-slate-600">
+                        Contains < 1% Crystalline Silica (Respirable). Material is predominantly amorphous. Standard dust control measures recommended (OSHA 1926.1153).
+                    </p>
+                </div>
+            </div>
+            
+            <h3 class="sans text-xs font-bold text-slate-900 mb-2 mt-6">5.1 Approved Applications</h3>
+            <ul class="list-disc list-inside text-sm text-slate-700 space-y-1 ml-2">
+                <li><strong>Pipe Bedding:</strong> Meets compaction requirements for non-structural utility trenches.</li>
+                <li><strong>Filtration Media:</strong> Effective size (D10) and Uniformity Coefficient (Cu) optimized for tertiary wastewater treatment.</li>
+                <li><strong>Abrasives:</strong> "Medium" grade suitable for blast media (SSPC-AB 1).</li>
+            </ul>
+        </section>
+
+        <!-- Footer Page 2 -->
+        <footer class="mt-12 pt-4 border-t border-slate-200 text-center">
+            <p class="sans font-bold text-slate-900 mb-1">Fructify LLC</p>
+            <p class="text-xs text-slate-500 mb-4">Program Management | Strategic Sourcing | Circular Economy Implementation</p>
+            <p class="mono text-[10px] text-slate-400">
+                Contact: mfarley@fructifyme.com | www.fructifyme.com
+            </p>
+        </footer>
+    </div>
+
+</body>
+</html>
