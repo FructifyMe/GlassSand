@@ -1,579 +1,538 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Anthropogenic Sand Economy | Full Strategy</title>
+    <title>Fructify LLC | The Anthropogenic Sand Economy Strategy</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Inter:wght@300;400;500;600&display=swap');
-        
+        :root {
+            --glass-green: #2d6a4f;
+            --sand-gold: #e9c46a;
+            --ocean-blue: #264653;
+        }
         body {
-            font-family: 'Merriweather', serif;
-            color: #334155;
-            background-color: #f8fafc;
-        }
-        .sans {
             font-family: 'Inter', sans-serif;
-        }
-        .page {
-            background: white;
-            max-width: 210mm; /* A4 width */
-            margin: 40px auto;
-            padding: 20mm;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
         h1, h2, h3, h4 {
-            font-family: 'Inter', sans-serif;
-            color: #0f172a;
+            font-family: 'Playfair Display', serif;
         }
-        p {
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            font-size: 0.95rem;
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        li {
-            margin-bottom: 0.75rem;
-            line-height: 1.6;
-        }
-        .citation-link {
-            color: #059669;
-            text-decoration: none;
-            border-bottom: 1px dotted #059669;
-            font-size: 0.85rem;
-            word-break: break-all;
-        }
-        .citation-link:hover {
-            background-color: #ecfdf5;
-        }
-        .figure-box {
-            background-color: #f1f5f9;
-            border: 1px solid #e2e8f0;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 0.5rem;
-        }
-        .figure-caption {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            color: #64748b;
-            margin-top: 1rem;
-            font-style: italic;
-        }
-
-        @media print {
-            body { background: none; }
-            .page { box-shadow: none; margin: 0; padding: 0; width: 100%; max-width: none; }
-            .no-print { display: none; }
-            .page-break { page-break-before: always; }
+        .gradient-text {
+            background: linear-gradient(135deg, #2d6a4f 0%, #264653 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800">
 
-    <!-- Print/Download Control -->
-    <div class="no-print fixed top-6 right-6 z-50 flex gap-2">
-        <a href="index.html" class="bg-slate-800 text-white px-4 py-2 rounded shadow hover:bg-slate-700 sans text-sm transition">
-            <i class="fa-solid fa-arrow-left mr-2"></i> Back to Portal
-        </a>
-        <button onclick="window.print()" class="bg-emerald-600 text-white px-4 py-2 rounded shadow hover:bg-emerald-500 sans text-sm transition">
-            <i class="fa-solid fa-print mr-2"></i> Print Document
-        </button>
-    </div>
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <!-- Fructify Brand Icon: Simple Green Leaf -->
+                    <div class="w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center border border-emerald-100 shadow-sm">
+                        <i class="fa-solid fa-leaf text-emerald-600 text-xl"></i>
+                    </div>
+                    <span class="font-bold text-xl tracking-tight text-slate-900">Fructify <span class="text-emerald-600 font-light">LLC</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <span class="text-xs font-bold uppercase tracking-widest text-slate-400 border-r border-slate-200 pr-4">Client Strategy Portal</span>
+                    <a href="#intro" class="text-slate-600 hover:text-emerald-600 font-medium">The Vision</a>
+                    <a href="#credits" class="text-slate-600 hover:text-emerald-600 font-medium">Green Credits</a>
+                    <a href="#markets" class="text-slate-600 hover:text-emerald-600 font-medium">Markets</a>
+                    <a href="#prospectus" class="bg-emerald-600 text-white px-4 py-2 rounded-full hover:bg-emerald-700 transition shadow-md shadow-emerald-200">View Prospectus</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Document Content -->
-    <div class="page">
-        
-        <!-- Header -->
-        <header class="border-b-4 border-emerald-600 pb-6 mb-10">
-            <div class="flex justify-between items-start">
-                <h1 class="text-3xl font-bold leading-tight w-3/4">The Anthropogenic Sand Economy: <span class="text-emerald-700 block text-xl mt-2 font-normal">A Comprehensive Strategy for Monetizing Pulverized Glass via Environmental Attributes and High-Value Applications</span></h1>
-                <div class="text-right">
-                    <div class="flex items-center gap-2 justify-end mb-1">
+    <!-- Hero Section -->
+    <!-- UPDATED: Increased top padding (pt-40 lg:pt-64) to prevent title clipping -->
+    <header id="intro" class="relative pt-40 pb-20 lg:pt-64 lg:pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0 opacity-10">
+            <svg class="h-full w-full text-emerald-200" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 100 C 20 0 50 0 100 100 Z"></path>
+            </svg>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-block mb-4 px-4 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-600 text-xs font-bold uppercase tracking-widest">
+                Strategic Initiative Prepared by Fructify LLC
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text leading-tight">The Anthropogenic<br>Sand Economy</h1>
+            <p class="mt-4 text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto">
+                Decoupling physical utility from environmental value. We don't just recycle glass; we engineer sustainable industrial minerals and verified carbon offsets.
+            </p>
+            <div class="mt-10 flex justify-center gap-4">
+                <a href="#markets" class="px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-emerald-600 hover:bg-emerald-700 md:py-4 md:text-lg shadow-lg transition transform hover:-translate-y-1">
+                    Explore Applications
+                </a>
+                <a href="#credits" class="px-8 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 md:py-4 md:text-lg shadow-sm transition">
+                    Monetize Attributes
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Executive Summary / Intro -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-slate-900 mb-8 text-center">The Paradigm Shift</h2>
+            <div class="prose prose-lg text-slate-600 mx-auto">
+                <p>
+                    The global construction sector faces a silent crisis: the depletion of construction-grade sand. Simultaneously, the waste industry struggles with glass recycling costs. For operators of glass pulverizing machinery, this is a singular economic opportunity.
+                </p>
+                <p>
+                    The future of profitability lies in a strategic pivot: decoupling the <strong>physical utility</strong> of the sand from its <strong>environmental attributes</strong>. When a ton of glass is diverted from a landfill, it generates two distinct revenue streams: the high-margin physical product and the "invisible" environmental credit.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="fa-solid fa-cube text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Physical Asset</h3>
+                    <p class="text-sm text-slate-600">Coastal restoration sand, filtration media, and agricultural silica. Market value: $20 - $50+ per ton.</p>
+                </div>
+                <div class="p-6 bg-slate-50 rounded-xl border border-slate-100">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mb-4">
                         <i class="fa-solid fa-leaf text-emerald-600"></i>
-                        <span class="font-bold sans text-slate-900">Fructify LLC</span>
                     </div>
-                    <p class="sans text-xs text-slate-400">ORIGINAL RESEARCH DOC</p>
+                    <h3 class="text-xl font-bold mb-2">Environmental Asset</h3>
+                    <p class="text-sm text-slate-600">Scope 3 verified credits, landfill diversion certificates. Market value: $50 - $70 per ton (additive).</p>
                 </div>
             </div>
-        </header>
+        </div>
+    </section>
 
-        <!-- Section 1 -->
-        <section>
-            <h2 class="text-xl font-bold mb-4 uppercase tracking-wide text-slate-400 text-sm">1. Introduction</h2>
-            <h3 class="text-2xl font-bold mb-4 text-emerald-800">The Paradigm Shift from Waste to Resource</h3>
-            <p>
-                The global construction and industrial sectors are currently navigating a silent crisis: the rapid depletion of construction-grade sand. While desert sand is abundant, it is functionally useless for engineering applications due to its wind-rounded grains which lack the cohesive friction required for concrete and stable landforms. The world relies on angular, water-eroded sand from riverbeds and marine environments—resources that are being extracted at rates far exceeding their natural replenishment. Concurrently, the waste management industry faces a crisis of its own regarding glass. Despite being infinitely recyclable, glass often languishes in landfills or is used for low-value daily cover due to the logistical costs of transport to centralized cullet processors and the stringent purity requirements of glass-to-glass recycling.
-            </p>
-            <p>
-                For operators of glass pulverizing machinery, this dual crisis represents a singular economic opportunity. You possess the technology to transmute a liability (waste glass) into a highly sought-after asset: "anthropogenic sand." This material, chemically identical to natural silica sand but structurally engineered through the pulverization process, offers a sustainable alternative to mined aggregates. However, the traditional business model for glass recycling—relying heavily on tipping fees and selling commodity-grade cullet for pennies—is obsolete. It fails to capture the true value of the material.
-            </p>
-            <p>
-                The future of profitability in glass recycling lies in a fundamental strategic pivot: decoupling the <strong>physical utility</strong> of the sand from its <strong>environmental attributes</strong>. When a ton of glass is diverted from a landfill and processed into sand, it generates two distinct, monetizable value streams. First, there is the physical product, which can be sold into high-margin niche markets such as coastal restoration, regenerative agriculture, and advanced filtration. Second, there is the "invisible" product: the environmental credit. This credit represents the avoided carbon emissions, the preservation of virgin resources, and the diversion of waste.
-            </p>
-            <p>
-                This report provides an exhaustive analysis of how to operationalize this dual-revenue model. It moves beyond generic recycling advice to provide a granular, expert-level roadmap for creating and selling "green credits" to corporate buyers, navigating the regulatory landscape of New England (with a specific focus on Massachusetts), and penetrating high-value industrial markets that pay exponentially more than the asphalt or concrete industries. By adopting this "outside the box" perspective, your operation can transition from a waste processing facility into a premier supplier of sustainable industrial minerals and verified environmental offsets.
-            </p>
-        </section>
+    <!-- Green Credits Section -->
+    <section id="credits" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">The Financial Architecture of "Green Credits"</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">Decoupling the "Green" value from the "Sand" value to double revenue per ton.</p>
+            </div>
 
-        <!-- Section 2 -->
-        <section class="mt-8">
-            <h2 class="text-xl font-bold mb-4 uppercase tracking-wide text-slate-400 text-sm">2. Financial Architecture</h2>
-            <h3 class="text-2xl font-bold mb-4 text-emerald-800">The Financial Architecture of "Green Credits"</h3>
-            <p>
-                Your intuition regarding "transferable and monetizable green credits" is astute and represents the most potent lever for increasing your operation's profitability. In the current market, most glass processors inadvertently bundle the environmental benefit of their work with the physical product, effectively giving away the "green" value for free. To maximize revenue, you must <strong>decouple</strong> these attributes and sell them as independent assets.
-            </p>
-
-            <h4 class="text-lg font-bold mt-6 mb-2 text-slate-900">2.1 The Mechanics of Decoupling Value</h4>
-            <p>
-                When you process one ton of waste glass, you generate a verifiable environmental impact. This impact includes the avoidance of methane emissions (if the glass would have otherwise taken up landfill space that contributes to anaerobic conditions), the reduction of Scope 3 emissions for the waste generator, and the preservation of natural capital (mined sand).
-            </p>
-            <p>
-                To monetize this, you must treat the <strong>environmental attribute</strong> as a standalone product. This is analogous to the renewable energy market, where a wind farm sells the electricity to the grid but sells the "Renewable Energy Certificate" (REC) separately to a corporation wanting to claim they use green power. In your context, you can sell the physical sand to a construction firm for a competitive market rate (e.g., $10–$20 per ton), while simultaneously selling the "Glass Diversion Credit" to a separate entity—such as a local bank, brewery, or tech company—for a premium (e.g., $50–$70 per ton). This effectively doubles or triples the revenue per ton processed.
-            </p>
-
-            <!-- Figure Representation -->
-            <div class="figure-box">
-                <h5 class="sans font-bold text-lg mb-2">The Decoupled Revenue Model: Double-Monetizing Waste Glass</h5>
-                <div class="flex flex-col md:flex-row gap-4 text-sm sans">
-                    <div class="flex-1 bg-slate-200 p-4 rounded text-center">
-                        <strong class="block text-slate-600 mb-2">Raw Waste Glass</strong>
-                        <span class="text-xs">(1 Ton Input)</span>
-                    </div>
-                    <div class="flex items-center justify-center">
-                        <i class="fa-solid fa-arrow-right text-slate-400"></i>
-                    </div>
-                    <div class="flex-1 space-y-2">
-                        <div class="bg-blue-100 p-3 rounded border border-blue-200">
-                            <strong class="text-blue-800">Physical Market (40% Value)</strong>
-                            <p class="text-xs text-blue-600">Construction & Ag Sand</p>
-                        </div>
-                        <div class="bg-red-100 p-3 rounded border border-red-200">
-                            <strong class="text-red-800">Digital Attributes (60% Value)</strong>
-                            <p class="text-xs text-red-600">ESG Certificates & Scope 3 Offsets</p>
-                        </div>
-                    </div>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-emerald-500 transition duration-300">
+                    <div class="text-emerald-400 text-4xl mb-6"><i class="fa-solid fa-network-wired"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Distributed Shared Responsibility (DSR)</h3>
+                    <p class="text-slate-400 mb-6">Utilizing blockchain or transparent ledgers to track the glass journey. A verified chain of custody generates a "Certificate of Recycling" valued significantly higher than the raw material.</p>
                 </div>
-                <p class="figure-caption">
-                    This diagram demonstrates how a single ton of waste glass generates revenue through two simultaneous channels. The physical sand is sold to industrial or agricultural buyers, while the 'environmental attribute' (carbon/waste diversion status) is packaged as a digital certificate and sold to corporate sponsors seeking Scope 3 offsets.
-                </p>
-            </div>
 
-            <h4 class="text-lg font-bold mt-6 mb-2 text-slate-900">2.2 The "Distributed Shared Responsibility" (DSR) Model</h4>
-            <p>
-                The most viable framework for implementing this strategy is the Distributed Shared Responsibility (DSR) model, pioneered in the glass sector by organizations like the End of Waste Foundation (EOW). This model utilizes blockchain technology to create an immutable ledger of the glass's journey from the recycling bin to its final non-landfill application.
-            </p>
-
-            <h5 class="font-bold mt-4 mb-2 text-sm uppercase text-slate-600">2.2.1 How the Blockchain Model Works</h5>
-            <p>
-                In a DSR system, every step of the recycling process is recorded. When a hauler picks up the glass, a transaction is logged. When your machine pulverizes it, another log is created. Finally, when the sand is sold to a farmer or beach restoration project, the "loop" is closed. This verified chain of custody generates a <strong>"Certificate of Recycling"</strong> or <strong>"Glass Credit."</strong>
-            </p>
-            <p>
-                Research indicates that these certificates can be valued significantly higher than the material itself. For instance, EOW certificates have been valued at approximately <strong>$70 per ton</strong>. This value is derived from the willingness of brands (like beverage companies or consumer goods manufacturers) to pay for the assurance that their packaging is not ending up in a landfill, thereby mitigating their reputational risk and helping them meet voluntary Extended Producer Responsibility (EPR) targets.
-            </p>
-
-            <h5 class="font-bold mt-4 mb-2 text-sm uppercase text-slate-600">2.2.2 The DIY "Local Offset" Strategy</h5>
-            <p>
-                While joining a blockchain platform is a robust long-term goal, you can immediately implement a <strong>"DIY" version</strong> of this model to generate revenue now. You do not need a complex crypto-ledger to sell credibility; you need transparency and data.
-            </p>
-            <ul class="list-disc pl-5 mb-4 text-sm">
-                <li><strong>The "Local Circularity Certificate" Product:</strong> Create a branded certificate product to sell to local businesses in Massachusetts and the wider New England area. Your target buyers are entities with strong community ties and sustainability mandates, such as regional banks, universities, hospitals, and local breweries.</li>
-                <li><strong>The Pitch:</strong> "Sponsor the restoration of or the sustainability of [Local Farm]."</li>
-                <li><strong>The Mechanism:</strong> For a sponsorship fee (e.g., $1,000), the business receives a certificate verifying that they funded the diversion of 20 tons of glass, which was processed into sand and used for a specific local project (e.g., "Replenishing Salisbury Beach dunes").</li>
-                <li><strong>The Deliverable:</strong> Provide the sponsor with a quarterly "Sustainability Impact Report" detailing:
-                    <ul class="list-circle pl-5 mt-1 text-slate-600">
-                        <li>Tons of glass diverted.</li>
-                        <li>Cubic yards of landfill space saved (conversion factor: ~1 ton = 1.4 cy).</li>
-                        <li>Equivalent "mined sand" avoided.</li>
-                        <li>Specific end-use location (with photos).</li>
-                    </ul>
-                </li>
-            </ul>
-            <p>
-                This approach bypasses the need for international carbon market verification (which is costly and slow) by relying on <strong>local verification</strong> and tangible community impact. A local bank is far more likely to buy a credit that "Saved Our Local Beach" than a generic carbon credit from a forestry project overseas.
-            </p>
-
-            <h4 class="text-lg font-bold mt-6 mb-2 text-slate-900">2.3 Scope 3 Emissions: The Corporate Driver</h4>
-            <p>
-                To effectively sell these credits, you must speak the language of corporate carbon accounting, specifically <strong>Scope 3 Emissions</strong>. Under the Greenhouse Gas Protocol, a company's emissions are categorized into three scopes:
-            </p>
-            <ul class="list-disc pl-5 mb-4 text-sm">
-                <li><strong>Scope 1:</strong> Direct emissions from owned sources (e.g., company vehicles).</li>
-                <li><strong>Scope 2:</strong> Indirect emissions from purchased energy (e.g., electricity).</li>
-                <li><strong>Scope 3:</strong> All other indirect emissions in the value chain, including <strong>waste disposal</strong> and <strong>purchased goods</strong>.</li>
-            </ul>
-            <p>
-                For a hotel chain, restaurant group, or office park, the waste they generate is a Scope 3 liability. When they send glass to a landfill, their Scope 3 emissions increase. When they pay you to recycle it, they are mitigating that liability. However, to claim a <strong>reduction</strong>, they need data.
-            </p>
-            <div class="bg-emerald-50 p-4 border-l-4 border-emerald-500 my-4 text-sm">
-                <strong>Monetization Strategy:</strong>
-                <p class="mt-2">Offer a tiered service model.</p>
-                <ul class="list-disc pl-5 mt-1">
-                    <li><strong>Basic Tier:</strong> Glass pickup and processing (Standard Fee).</li>
-                    <li><strong>Premium "Zero Waste" Tier:</strong> Pickup, processing, and a <strong>verified Scope 3 reduction certificate</strong>.</li>
-                </ul>
-                <p class="mt-2">Charge a premium for this tier. The premium covers the data collection and reporting service. Provide them with the specific data points they need for their ESG (Environmental, Social, and Governance) reporting: "X tons of material diverted from landfill," "X tons of CO2e avoided vs. virgin sand mining."</p>
-            </div>
-            <p>
-                This transforms your invoice from a "garbage bill" (a cost to be minimized) into a "sustainability investment" (value added).
-            </p>
-
-            <h4 class="text-lg font-bold mt-6 mb-2 text-slate-900">2.4 The "Plastic Credit" Parallel</h4>
-            <p>
-                The market for "Plastic Credits" (credits generated for removing plastic from the environment) has matured significantly, with standards established by bodies like Verra and PCX Markets. While glass is inert and does not pose the same acute toxicity threats as ocean plastic, the <strong>financial mechanism</strong> is identical. The "Glass Credit" is simply the next evolution of this market.
-            </p>
-            <p>
-                <strong>Strategic Recommendation:</strong> Partner with local environmental NGOs or coastal protection groups. By having a non-profit verify your diversion numbers, you add third-party legitimacy to your "DIY" credits, making them more attractive to corporate buyers who are wary of "greenwashing."
-            </p>
-        </section>
-
-        <!-- Section 3 -->
-        <section class="mt-8 page-break">
-            <h2 class="text-xl font-bold mb-4 uppercase tracking-wide text-slate-400 text-sm">3. High-Value "Outside the Box" Market Applications</h2>
-            <p>
-                While the environmental credit provides a high-margin revenue layer, the physical sand must still be utilized. The key to maximizing the value of the physical commodity is to stop competing with "fill dirt" and start competing with <strong>engineered industrial minerals</strong>. By pivoting to niche applications where the specific properties of glass—purity, angularity, and silica content—are valued, you can command prices far exceeding the typical $5–$10 per ton for road base.
-            </p>
-
-            <h4 class="text-lg font-bold mt-6 mb-2 text-slate-900">3.1 Coastal Restoration: The "Blue Economy" Moonshot</h4>
-            <p>
-                New England coastlines are facing an existential threat from erosion. Areas like <strong>Salisbury Beach</strong>, <strong>Plum Island</strong>, and the wider North Shore of Massachusetts are in a constant battle against rising sea levels and storm surges. The current solution—dredging sand from offshore or trucking it in from inland quarries—is prohibitively expensive and ecologically disruptive.
-            </p>
-            <p><strong>The Solution:</strong> Pulverized Glass Sand (PGS) as "Restoration-Grade Sediment."</p>
-            <ul class="list-disc pl-5 mb-4 text-sm">
-                <li><strong>Scientific Compatibility:</strong> Extensive research, including major pilot projects by the ReCoast team at Tulane University and the Glass Half Full initiative in Louisiana, has proven that clean, processed glass sand is geotechnically and biologically compatible with native beach environments. It is comprised of the same primary compound (silica) as natural sand.</li>
-                <li><strong>Erosion Resistance:</strong> Studies suggest that because glass sand grains can be engineered to be more angular than wind-worn beach sand, they may lock together more effectively, potentially offering <strong>superior</strong> erosion resistance compared to dredging silt.</li>
-                <li><strong>Biocompatibility:</strong> PGS supports the growth of native dune grasses and marsh vegetation. In fact, research indicates that plants grown in glass sand mixtures can exhibit faster growth rates and better root retention than those in standard dredged sediment.</li>
-            </ul>
-
-             <!-- Figure Representation -->
-             <div class="figure-box">
-                <h5 class="sans font-bold text-lg mb-2">Restoration-Grade Glass: The Dune Core Strategy</h5>
-                <div class="h-48 bg-slate-200 rounded flex items-center justify-center border border-slate-300">
-                     <div class="text-center text-slate-500 p-4">
-                        <i class="fa-solid fa-layer-group text-4xl mb-2"></i>
-                        <p class="font-bold">Sacrificial Core Visualization</p>
-                        <p class="text-xs">Top Layer: Natural Sand (1-2ft) <br> Base Layer: Recycled Glass Core</p>
-                     </div>
+                <!-- Card 2 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-emerald-500 transition duration-300 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-emerald-600 text-xs font-bold px-3 py-1 rounded-bl-lg">IMMEDIATE ACTION</div>
+                    <div class="text-emerald-400 text-4xl mb-6"><i class="fa-solid fa-stamp"></i></div>
+                    <h3 class="text-xl font-bold mb-4">The "Local Circularity" Certificate</h3>
+                    <p class="text-slate-400 mb-6">A DIY offset strategy. Sell "Sponsorships" to local banks or breweries. For $1,000, they sponsor the diversion of 20 tons of glass for a local beach project, receiving a verified "Sustainability Impact Report."</p>
                 </div>
-                <p class="figure-caption">
-                    Proposed application of recycled glass sand in coastal defense. The pulverized glass (PGS) forms the 'Sacrificial Core' or base volume of the dune, reducing the amount of expensive dredged sand required. Deep-rooting native grasses (e.g., American Beachgrass) penetrate the glass layer, utilizing the porous structure for stability and silica uptake.
-                </p>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 hover:border-emerald-500 transition duration-300">
+                    <div class="text-emerald-400 text-4xl mb-6"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3 class="text-xl font-bold mb-4">Scope 3 Emission Offsets</h3>
+                    <p class="text-slate-400 mb-6">Target corporate ESG goals. For a hotel chain, waste is a Scope 3 liability. By paying a premium for your "Zero Waste Tier," they mitigate this liability with data-backed reporting.</p>
+                </div>
             </div>
 
-            <p>
-                <strong>The "Sacrificial Dune Core" Strategy:</strong><br>
-                To overcome public perception hurdles ("glass on the beach"), the optimal application is the <strong>"Sacrificial Dune Core."</strong> In this engineering model, the glass sand is used to build the volume and base of the dune, which is then capped with 1-2 feet of natural beach sand.
-            </p>
-            <p>
-                <strong>Economic Arbitrage:</strong> Natural beach-compatible sand can cost upwards of $20–$50 per cubic yard (or ton) delivered. If you can provide verified, clean glass sand for $15–$25 per ton, you offer a massive cost-saving to municipalities while securing a price double that of landfill cover.
-            </p>
-            <p>
-                <strong>Regulatory Pathway:</strong> In Massachusetts, this requires a <strong>Beneficial Use Determination (BUD)</strong> from MassDEP. While rigorous, the precedent exists. The key is to demonstrate that the material is physically safe (no shards) and chemically inert (no leaching), which container glass inherently is.
-            </p>
+            <!-- Download Section for Green Credits -->
+            <div class="mt-12 text-center">
+                <div class="inline-block bg-slate-800 rounded-2xl p-8 border border-slate-700 max-w-3xl">
+                    <h3 class="text-2xl font-bold mb-3 text-white">Unlock the Hidden Revenue</h3>
+                    <p class="text-slate-400 mb-6 text-sm">
+                        Dive deep into the regulatory frameworks, loophole strategies, and legal methodologies for monetizing environmental attributes.
+                    </p>
+                    <a href="green_credit_strategy.html" target="_blank" class="inline-flex items-center gap-3 bg-emerald-600 text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-500 transition shadow-lg shadow-emerald-900/40 transform hover:-translate-y-1">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        Download Green Credit Strategy Report
+                    </a>
+                    <p class="mt-3 text-xs text-slate-500 uppercase tracking-widest">Confidential Strategy Doc • Prepared by Fructify LLC</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <h4 class="text-lg font-bold mt-6 mb-2 text-slate-900">3.2 Regenerative Agriculture: The Silica Super-Ingredient</h4>
-            <p>
-                This application leverages the chemical composition of glass rather than just its physical bulk. Glass is essentially amorphous silica (SiO₂). While silica is not one of the primary N-P-K nutrients, modern plant physiology recognizes it as a vital "quasi-essential" element that confers <strong>structural immunity</strong> to crops.
-            </p>
-            <p><strong>The Science of Silica Uptake:</strong></p>
-            <ul class="list-disc pl-5 mb-4 text-sm">
-                <li>When pulverized glass is added to soil, weathering processes slowly release <strong>monosilicic acid</strong> (H₄SiO₄), the specific form of silica that plants can absorb.</li>
-                <li><strong>Structural Fortification:</strong> Plants deposit this silica in their cell walls in the form of phytoliths (microscopic opal-like structures). This acts as "armor," making the plant tissue physically harder for insects to chew and more resistant to fungal hyphae penetration.</li>
-                <li><strong>Drought & Stress Resistance:</strong> Silica deposition strengthens the plant's vascular system, reducing transpiration (water loss) and allowing crops to withstand drought stress—a critical advantage for farmers facing increasingly erratic climate patterns.</li>
-                <li><strong>Anti-Fungal Properties:</strong> Research at <strong>UTRGV</strong> and other institutions has shown that plants grown in glass-amended substrates exhibited significantly reduced or zero fungal growth compared to control groups. This is a massive selling point for high-value crops susceptible to mold, such as cannabis, tomatoes, and leafy greens.</li>
-            </ul>
-
-            <h5 class="font-bold mt-4 mb-2 text-sm uppercase text-slate-600">Target Market 1: The Massachusetts Cranberry Industry</h5>
-            <p>
-                Massachusetts is a global leader in cranberry production. Cranberry bogs require a unique management practice called <strong>"sanding,"</strong> where 1-2 inches of sand are applied to the bog surface every few years to stimulate vine growth, bury pests, and improve drainage.
-            </p>
-            <p>
-                <strong>The Opportunity:</strong> Natural sand sources are dwindling and often contain weed seeds or pathogens. Pulverized glass sand is <strong>sterile</strong>, weed-free, and silica-rich.
-            </p>
-            <p>
-                <strong>Strategy:</strong> Engage with the <strong>Cape Cod Cranberry Growers' Association</strong> or local growers in Carver and Plymouth. Offer a pilot program to provide "Sterile Silica Bog Sand" for a test plot. If the glass sand proves to reduce pest pressure (due to the silica uptake), you will have unlocked a recurring, high-volume agricultural market that values the product far above construction fill.
-            </p>
-
-            <h5 class="font-bold mt-4 mb-2 text-sm uppercase text-slate-600">Target Market 2: Hydroponics & Vertical Farming</h5>
-            <p>The vertical farming sector (e.g., <strong>Little Leaf Farms</strong> in Devens, MA) relies on inert growing media.</p>
-            <p>
-                <strong>The Fit:</strong> Glass sand is chemically inert, pH-neutral (once washed), and offers excellent drainage properties. It does not degrade like peat moss or rockwool, making it a potentially reusable substrate.
-            </p>
-            <p>
-                <strong>Marketing Angle:</strong> "Sustainable, locally-sourced, reusable growing media." This aligns perfectly with the "low carbon footprint" branding of local hydroponic greens.
-            </p>
-
-            <h4 class="text-lg font-bold mt-6 mb-2 text-slate-900">3.3 High-Margin Industrial Niches</h4>
-            <p>Beyond construction and agriculture, there are specific industrial applications where glass sand outperforms natural sand and thus commands a premium price.</p>
+    <!-- High Value Markets -->
+    <section id="markets" class="py-20 bg-emerald-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-12 text-center">Beyond "Fill Dirt": High-Value Applications</h2>
             
-            <ol class="list-decimal pl-5 space-y-4 text-sm">
-                <li>
-                    <strong>Advanced Pool Filtration Media:</strong> Glass is superior to silica sand for water filtration.
-                    <ul class="list-disc pl-5 mt-1 text-slate-600">
-                        <li><strong>Performance:</strong> Glass particles possess a permanent negative surface charge (zeta potential), which attracts and holds positively charged fine particles and bacteria. Glass media filters down to <strong>5-10 microns</strong>, whereas traditional sand only captures particles down to 20-40 microns.</li>
-                        <li><strong>Operational Savings:</strong> Glass media is less dense (requiring 15-20% less material by weight to fill a filter) and resists biofilm formation, reducing the frequency and water volume required for backwashing by up to 25%.</li>
-                        <li><strong>Pricing:</strong> "Eco-Glass Filter Media" is a premium product. While filter sand might sell for $10–$15 per 50lb bag at retail, glass media often sells for <strong>$30–$40 per bag</strong>. Selling directly to commercial pool operators (hotels, gyms, municipal pools) allows you to capture a significant portion of this margin.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Weighted Consumer Goods:</strong> The market for weighted blankets, therapy dolls (reborn dolls), and draft stoppers relies on heavy, dense fillers.
-                    <ul class="list-disc pl-5 mt-1 text-slate-600">
-                        <li><strong>The Product:</strong> "Glass Microbeads" or tumbled glass sand.</li>
-                        <li><strong>The Requirement:</strong> The glass must be tumbled to ensure smooth edges (safe to touch) and washed.</li>
-                        <li><strong>The Value:</strong> This market buys by the <strong>pound</strong>, not the ton. Virgin glass beads are expensive. Recycled, tumbled glass offers a sustainable, cost-effective alternative for manufacturers of these goods. "Eco-filler" is a strong selling point for consumer brands focused on sustainability.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Epoxy Flooring and Terrazzo:</strong> Crushed glass is a popular aggregate for high-end epoxy flooring and countertops.
-                    <ul class="list-disc pl-5 mt-1 text-slate-600">
-                        <li><strong>The Aesthetic:</strong> Clear or colored glass chips create a unique, terrazzo-like finish that is durable and visually striking.</li>
-                        <li><strong>The Market:</strong> Commercial spaces (garages, showrooms, lobbies) in the Boston and North Shore area are prime targets. By sorting your glass by color (or offering a specific "mixed" aesthetic), you can sell to flooring contractors at a price point that reflects a decorative architectural product rather than a waste product.</li>
-                    </ul>
-                </li>
-            </ol>
-        </section>
-
-        <!-- Section 4 -->
-        <section class="mt-8 page-break">
-            <h2 class="text-xl font-bold mb-4 uppercase tracking-wide text-slate-400 text-sm">4. Operational & Regulatory Roadmap: Executing the Strategy</h2>
-            <p>To transition from a "waste hauler" mindset to a "materials manufacturer," specific operational and regulatory steps must be taken. This section focuses on the Massachusetts regulatory environment.</p>
-
-            <h4 class="text-lg font-bold mt-6 mb-2 text-slate-900">4.1 Navigating MassDEP and Beneficial Use Determinations (BUD)</h4>
-            <p>In Massachusetts, waste glass is legally classified as "Solid Waste." To sell it as a product (sand), you generally need a <strong>Beneficial Use Determination (BUD)</strong> from the Massachusetts Department of Environmental Protection (MassDEP).</p>
-            <ul class="list-disc pl-5 mb-4 text-sm">
-                <li><strong>The Objective:</strong> Reclassify your PGS from a solid waste to a <strong>"Secondary Material"</strong> or product. This removes the stigma and legal hurdles associated with waste handling for your customers.</li>
-                <li><strong>The Standards:</strong> MassDEP typically requires that Processed Glass Aggregate (PGA) be:
-                    <ul class="list-circle pl-5 mt-1 text-slate-600">
-                        <li>Free of contaminants (typically <5% non-glass residue like paper or plastic labels).</li>
-                        <li>Processed to a specific grain size (usually 100% passing a 3/8-inch sieve for general use, though beach/ag uses may require different specs).</li>
-                        <li>Chemically inert (proven via TCLP testing to ensure no leaching of heavy metals).</li>
-                    </ul>
-                </li>
-                <li><strong>Precedent:</strong> There is an existing "Interim Policy on the Beneficial Use of Waste Glass" in MA, which allows for certain uses (like construction aggregate) without a full site-specific permit, provided specific purity standards are met. However, for "outside the box" uses like beach nourishment or agriculture, you may need to apply for a specific BUD (B-U-D 1 or B-U-D 2).</li>
-            </ul>
-
-            <h4 class="text-lg font-bold mt-6 mb-2 text-slate-900">4.2 Leveraging State Incentives</h4>
-            <p>Massachusetts offers robust incentives that can subsidize your operations or make your services more attractive to municipal partners.</p>
-            <ul class="list-disc pl-5 mb-4 text-sm">
-                <li><strong>Recycling Dividends Program (RDP):</strong> Municipalities in MA earn RDP points (which translate to grant money) for implementing sustainable waste practices.
-                    <br><strong>Strategy:</strong> Partner with a town (e.g., Danvers, Salisbury) to be their designated glass processor. Your service helps them earn RDP points for "waste reduction" or "hard-to-recycle materials." You can negotiate a contract where the town pays a processing fee, or guarantees volume, in exchange for the RDP benefits they accrue.
-                </li>
-                <li><strong>Recycling Business Development Grants (RBDG):</strong> MassDEP periodically offers grants (often ranging from $50,000 to $500,000) specifically for recycling processors to upgrade equipment.
-                    <br><strong>Action:</strong> Apply for an RBDG to fund the purchase of <strong>tumbling equipment</strong> (to make the glass safe for beaches/consumer goods) or <strong>optical sorters</strong> (to separate colors for higher-value markets). This is effectively free capital to upgrade your product value chain.
-                </li>
-            </ul>
-
-            <h4 class="text-lg font-bold mt-6 mb-2 text-slate-900">4.3 Revenue Comparison</h4>
-            <p>To visualize the financial impact of shifting from "disposal" to "productization," the following chart compares the estimated revenue potential across the identified applications.</p>
-
-            <!-- Figure Representation -->
-             <div class="figure-box">
-                <h5 class="sans font-bold text-lg mb-2">The Value Ladder: Revenue Potential by Application</h5>
-                <div class="space-y-4 sans text-sm">
-                    <div class="flex items-center">
-                        <div class="w-1/3 text-right pr-4 text-slate-600">Backfill (Utility Trench)</div>
-                        <div class="w-2/3 flex items-center">
-                            <div class="h-6 bg-slate-300 w-4 rounded-r"></div>
-                            <span class="ml-2 font-bold text-slate-500">$4</span>
+            <div class="space-y-16">
+                
+                <!-- Market 1: Coastal -->
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/2">
+                        <div class="bg-white p-2 rounded-2xl shadow-xl transform -rotate-1">
+                           <div class="bg-blue-200 h-64 rounded-xl flex items-center justify-center overflow-hidden relative">
+                                <!-- Abstract visual for beach -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-blue-600 to-blue-300 opacity-80"></div>
+                                <div class="absolute bottom-0 w-full h-1/2 bg-[#e9c46a]"></div>
+                                <i class="fa-solid fa-water text-white text-6xl relative z-10 opacity-50"></i>
+                           </div>
                         </div>
                     </div>
-                    <div class="flex items-center">
-                        <div class="w-1/3 text-right pr-4 text-slate-600">General Recycling Value</div>
-                        <div class="w-2/3 flex items-center">
-                            <div class="h-6 bg-slate-300 w-12 rounded-r"></div>
-                            <span class="ml-2 font-bold text-slate-500">$11</span>
-                        </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Coastal Restoration: The "Blue Economy"</h3>
+                        <p class="text-slate-600 mb-6">
+                            New England coastlines face existential erosion threats. Pulverized Glass Sand (PGS) is a "Restoration-Grade Sediment."
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-1 mr-3"></i>
+                                <span class="text-slate-700"><strong>Sacrificial Dune Cores:</strong> Use glass sand for the dune base, capped with natural sand.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-1 mr-3"></i>
+                                <span class="text-slate-700"><strong>Economic Arbitrage:</strong> Sell at $15-25/ton vs. $50/ton for dredged sand.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-1 mr-3"></i>
+                                <span class="text-slate-700"><strong>Superior Performance:</strong> Angular grains lock together better than wind-worn sand.</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="flex items-center">
-                        <div class="w-1/3 text-right pr-4 text-slate-600">Glass Gravel (Aggregates)</div>
-                        <div class="w-2/3 flex items-center">
-                            <div class="h-6 bg-slate-300 w-16 rounded-r"></div>
-                            <span class="ml-2 font-bold text-slate-500">$14</span>
-                        </div>
+                </div>
+
+                <!-- Market 2: Agriculture -->
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center">
+                    <div class="md:w-1/2">
+                        <div class="bg-white p-2 rounded-2xl shadow-xl transform rotate-1">
+                            <div class="bg-green-200 h-64 rounded-xl flex items-center justify-center overflow-hidden relative">
+                                 <!-- Abstract visual for farming -->
+                                 <div class="absolute inset-0 bg-gradient-to-t from-green-800 to-emerald-400 opacity-80"></div>
+                                 <i class="fa-solid fa-seedling text-white text-6xl relative z-10 opacity-50"></i>
+                            </div>
+                         </div>
                     </div>
-                    <div class="flex items-center">
-                        <div class="w-1/3 text-right pr-4 text-emerald-700 font-bold">Glass Certificates (Credits)</div>
-                        <div class="w-2/3 flex items-center">
-                            <div class="h-6 bg-emerald-500 w-32 rounded-r"></div>
-                            <span class="ml-2 font-bold text-emerald-600">$70</span>
-                        </div>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">Regenerative Agriculture: Silica Super-Ingredient</h3>
+                        <p class="text-slate-600 mb-6">
+                            Glass is amorphous silica ($SiO_2$). Plants absorb monosilicic acid to build "structural immunity."
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-1 mr-3"></i>
+                                <span class="text-slate-700"><strong>Cranberry Bogs:</strong> Sterile, weed-free sanding material to replace dwindling natural sources.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-1 mr-3"></i>
+                                <span class="text-slate-700"><strong>Hydroponics:</strong> Inert, reusable growing media for vertical farms (e.g., Little Leaf).</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fa-solid fa-check text-emerald-600 mt-1 mr-3"></i>
+                                <span class="text-slate-700"><strong>Pest Resistance:</strong> Silica uptake creates physical barriers against insects and mold.</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="flex items-center">
-                        <div class="w-1/3 text-right pr-4 text-blue-700 font-bold">Pool Filtration (Consumer)</div>
-                        <div class="w-2/3 flex items-center">
-                            <div class="h-6 bg-blue-600 w-48 rounded-r"></div>
-                            <span class="ml-2 font-bold text-blue-600">$640</span>
-                        </div>
+                </div>
+
+                <!-- Market 3: Industrial -->
+                <div class="flex flex-col md:flex-row gap-12 items-center">
+                    <div class="md:w-1/2">
+                        <div class="bg-white p-2 rounded-2xl shadow-xl transform -rotate-1">
+                            <div class="bg-indigo-200 h-64 rounded-xl flex items-center justify-center overflow-hidden relative">
+                                 <!-- Abstract visual for industry -->
+                                 <div class="absolute inset-0 bg-gradient-to-t from-slate-800 to-indigo-500 opacity-80"></div>
+                                 <i class="fa-solid fa-industry text-white text-6xl relative z-10 opacity-50"></i>
+                            </div>
+                         </div>
                     </div>
-                    <div class="flex items-center">
-                        <div class="w-1/3 text-right pr-4 text-blue-700 font-bold">Pool Filtration (High-End)</div>
-                        <div class="w-2/3 flex items-center">
-                            <div class="h-6 bg-blue-600 w-full rounded-r"></div>
-                            <span class="ml-2 font-bold text-blue-600">$1,525</span>
+                    <div class="md:w-1/2">
+                        <h3 class="text-2xl font-bold text-slate-800 mb-4">High-Margin Industrial Niches</h3>
+                        <p class="text-slate-600 mb-6">
+                            Applications where glass outperforms natural materials and commands premium pricing.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                                <h4 class="font-bold text-emerald-700">Pool Filtration</h4>
+                                <p class="text-sm text-slate-600 mt-1">Filters to 5-10 microns (vs 20-40 for sand). Sells for $30-40 per bag.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100">
+                                <h4 class="font-bold text-emerald-700">Weighted Goods</h4>
+                                <p class="text-sm text-slate-600 mt-1">Clean, tumbled glass for weighted blankets and therapy dolls. Sold by the pound.</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-lg shadow-sm border border-slate-100 sm:col-span-2">
+                                <h4 class="font-bold text-emerald-700">Epoxy Flooring</h4>
+                                <p class="text-sm text-slate-600 mt-1">Terrazzo-style aggregate for high-end commercial flooring.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <p class="figure-caption">
-                    Estimated revenue potential per ton of processed glass. While bulk construction uses offer low margins (or merely cost avoidance), niche applications like pool filtration and weighted fillers command exponential premiums. 'Glass Certificates' represent an additive revenue layer that can be stacked on top of physical sales.
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Revenue Calculator & Data -->
+    <section class="py-20 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Revenue Potential per Ton</h2>
+            
+            <div class="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+                <div class="p-6 md:p-8">
+                    <!-- Graph representation -->
+                    <div class="space-y-6">
+                        <!-- Item -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium text-slate-700">Landfill Cover (Current State)</span>
+                                <span class="font-bold text-slate-500">$0 - $5</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-4">
+                                <div class="bg-slate-400 h-4 rounded-full" style="width: 5%"></div>
+                            </div>
+                        </div>
+                         <!-- Item -->
+                         <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium text-slate-700">Construction Fill</span>
+                                <span class="font-bold text-slate-600">$10 - $15</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-4">
+                                <div class="bg-yellow-500 h-4 rounded-full" style="width: 15%"></div>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium text-slate-700">Coastal Restoration Sand</span>
+                                <span class="font-bold text-blue-600">$20 - $30</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-4">
+                                <div class="bg-blue-500 h-4 rounded-full" style="width: 25%"></div>
+                            </div>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium text-slate-700">Filtration Media / Ag Sand</span>
+                                <span class="font-bold text-emerald-600">$50 - $100+</span>
+                            </div>
+                            <div class="w-full bg-slate-100 rounded-full h-4">
+                                <div class="bg-emerald-500 h-4 rounded-full" style="width: 50%"></div>
+                            </div>
+                        </div>
+                         <!-- Item -->
+                         <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="font-medium text-slate-700">PLUS: Green Credit Revenue (Additive)</span>
+                                <span class="font-bold text-green-700">+$50 - $70 / ton</span>
+                            </div>
+                            <div class="w-full bg-green-50 rounded-full h-4 border border-green-200">
+                                <div class="bg-green-600 h-4 rounded-full repeating-linear-gradient" style="width: 40%"></div>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-2 italic">*Green credits can be sold on top of physical product sales (excluding landfill).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Prospectus -->
+    <section id="prospectus" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <!-- Decorative bg -->
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <span class="text-emerald-400 font-bold tracking-wider uppercase text-sm">Strategic Prospectus</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-6">Partnering for a Circular Future</h2>
+                <p class="text-xl text-slate-300 max-w-3xl mx-auto">
+                    A guide to engaging stakeholders, securing funding, and launching the next phase of the Anthropogenic Sand Economy.
                 </p>
             </div>
-            
-            <p>
-                As illustrated, moving up the value chain from "Road Base" to "Pool Filtration" or "Weighted Filler" exponentially increases the revenue per ton. Crucially, the "Glass Certificate" revenue ($50-$70/ton) is <strong>additive</strong>—it can be stacked on top of any of the physical sales channels (except perhaps landfill cover, which would negate the diversion claim).
-            </p>
-        </section>
 
-        <!-- Section 5 -->
-        <section class="mt-8">
-            <h2 class="text-xl font-bold mb-4 uppercase tracking-wide text-slate-400 text-sm">5. Implementation Guide: The "Local Offset" Protocol</h2>
-            <p>To monetize the "Green Credit" immediately, without waiting for complex national trading schemes, we recommend launching a <strong>"Local Circularity Credit."</strong></p>
-            
-            <h5 class="font-bold mt-4 mb-2 text-sm uppercase text-slate-600">Step 1: Chain of Custody Protocol</h5>
-            <ul class="list-disc pl-5 mb-4 text-sm">
-                <li>Implement a digital logging system (using software like Re-TRAC or even a rigorous spreadsheet) that tracks:
-                    <ul class="list-circle pl-5 mt-1 text-slate-600">
-                        <li><strong>Inbound:</strong> Date, Source, Weight.</li>
-                        <li><strong>Processing:</strong> Date pulverized, batch number.</li>
-                        <li><strong>Outbound:</strong> Final Destination. Critically, the destination must be a beneficial use (farm, beach, construction), NOT a landfill.</li>
-                    </ul>
-                </li>
-            </ul>
-
-            <h5 class="font-bold mt-4 mb-2 text-sm uppercase text-slate-600">Step 2: The "Offset" Calculation</h5>
-            <ul class="list-disc pl-5 mb-4 text-sm">
-                <li>Use the <strong>EPA WARM Model</strong> (Waste Reduction Model) to calculate the specific GHG savings of your operation.</li>
-                <li><strong>Baseline:</strong> If you didn't exist, the glass would likely go to a landfill (generating transport emissions and taking up space) or be trucked long-distance to a cullet processor (high transport emissions).</li>
-                <li><strong>Your Benefit:</strong> Avoided landfilling + Avoided transport + Avoided virgin sand mining.</li>
-                <li><strong>Metric:</strong> Translate "Tons of Glass" into "Metric Tons of CO2 Equivalent" (MTCO2e).</li>
-            </ul>
-
-            <h5 class="font-bold mt-4 mb-2 text-sm uppercase text-slate-600">Step 3: The Sales Pitch</h5>
-            <p>Approach local businesses with a proposal:</p>
-            <blockquote class="border-l-4 border-slate-300 pl-4 italic my-4 text-slate-600">
-                "Your company generates Scope 3 waste. For a sponsorship of $X, we will certify the diversion of Y tons of local glass, transforming it into Z tons of beach-restoring sand for our community. We will provide you with a verified Impact Certificate for your annual ESG report."
-            </blockquote>
-            <p>This effectively creates a <strong>local voluntary market</strong>, bypassing the high barriers of global carbon exchanges.</p>
-        </section>
-
-        <!-- Section 6 -->
-        <section class="mt-8 pb-8 border-b border-slate-200">
-            <h2 class="text-xl font-bold mb-4 uppercase tracking-wide text-slate-400 text-sm">6. Conclusion</h2>
-            <p>
-                The business of glass pulverizing is undergoing a fundamental shift. The physical sand is no longer the sole, or even the primary, source of value. By recognizing the <strong>environmental attribute</strong> of the process—the carbon saved, the landfill diverted, the coastline restored—you can unlock a revenue stream that is decoupled from the low commodity price of aggregate.
-            </p>
-            <p>
-                The "outside the box" perspective is to view your machine not as a grinder, but as a <strong>transformer</strong>. It transforms a liability (waste) into three distinct assets:
-            </p>
-            <ul class="list-disc pl-5 mb-4 text-sm font-bold text-slate-700">
-                <li>A Structural Asset: <span class="font-normal text-slate-600">Engineering-grade sand for beaches and concrete.</span></li>
-                <li>A Chemical Asset: <span class="font-normal text-slate-600">Silica fertilizer for regenerative agriculture.</span></li>
-                <li>A Financial Asset: <span class="font-normal text-slate-600">Tradeable credits for corporate ESG goals.</span></li>
-            </ul>
-            <p>
-                Success requires moving beyond the "tipping fee" mentality and aggressively marketing these three assets to their respective, high-value audiences. The market for "green" is real, but it requires you to package and sell the <strong>story</strong> as effectively as you sell the sand.
-            </p>
-        </section>
-
-        <!-- Works Cited -->
-        <section class="mt-12">
-            <h2 class="text-xl font-bold mb-6 uppercase tracking-wide text-slate-400 text-sm">Works Cited</h2>
-            <div class="space-y-4 text-sm font-sans text-slate-600">
+            <div class="grid md:grid-cols-2 gap-12">
                 
-                <p>
-                    <strong>Waste360.</strong> "Colorado Glass Recycling Initiative Reaches Milestone." <br>
-                    <a href="https://www.waste360.com/glass/colorado-glass-recycling-initiative-reaches-milestone" target="_blank" class="citation-link">https://www.waste360.com/glass/colorado-glass-recycling-initiative-reaches-milestone</a>
-                </p>
-                
-                <p>
-                    <strong>Waste Dive.</strong> "End of Waste Foundation ramps up glass recycling platform." <br>
-                    <a href="https://www.wastedive.com/news/end-of-waste-foundation-glass-recycling-blockchain-update/573937/" target="_blank" class="citation-link">https://www.wastedive.com/news/end-of-waste-foundation-glass-recycling-blockchain-update/573937/</a>
-                </p>
+                <!-- Left Column: The Pitch -->
+                <div>
+                    <h3 class="text-2xl font-bold text-white mb-6 border-l-4 border-emerald-500 pl-4">The Value Proposition</h3>
+                    
+                    <div class="space-y-8">
+                        <div class="group">
+                            <h4 class="text-lg font-bold text-emerald-300 mb-2 group-hover:text-white transition">For Municipalities (The "Public" Pitch)</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                "Stop paying to ship glass waste out of state. Partner with us to keep resources local. By processing glass here, we help you earn <strong>MassDEP RDP points</strong>, reduce your carbon footprint, and generate low-cost sand for town maintenance and beach nourishment."
+                            </p>
+                        </div>
 
-                <p>
-                    <strong>About Caricoos.</strong> "recycled glass as beach nourishment material: preliminary Feasibility study" <br>
-                    <a href="https://about.caricoos.org/wp-content/uploads/2017/05/Recycled_Glass_Study.pdf" target="_blank" class="citation-link">https://about.caricoos.org/wp-content/uploads/2017/05/Recycled_Glass_Study.pdf</a>
-                </p>
+                        <div class="group">
+                            <h4 class="text-lg font-bold text-emerald-300 mb-2 group-hover:text-white transition">For Corporate ESG (The "Private" Pitch)</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                "Your Scope 3 emissions are a liability. Transform them into a community asset. Purchase our <strong>'Local Circularity Certificates'</strong> to fund local dune restoration. We provide the data, photos, and verification you need for your annual Sustainability Report."
+                            </p>
+                        </div>
 
-                <p>
-                    <strong>Saint-Gobain.</strong> "Emissions scopes: three levers for decarbonizing industry." <br>
-                    <a href="https://www.saint-gobain.com/en/magazine/stories/reduction-co2-emissions-do-you-know-about-scopes" target="_blank" class="citation-link">https://www.saint-gobain.com/en/magazine/stories/reduction-co2-emissions-do-you-know-about-scopes</a>
-                </p>
+                        <div class="group">
+                            <h4 class="text-lg font-bold text-emerald-300 mb-2 group-hover:text-white transition">For Investors (The "Growth" Pitch)</h4>
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                "We are not a waste company; we are a materials science company. We have secured high-margin offtake agreements in agriculture and filtration, insulating us from commodity fluctuations. We are scaling to meet the <strong>2030 sand shortage crisis</strong>."
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
-                <p>
-                    <strong>McKinsey & Company.</strong> "Tackling Scope 3 emissions through supplier collaboration." <br>
-                    <a href="https://www.mckinsey.com/capabilities/sustainability/our-insights/sustainability-blog/tackling-scope-3-emissions-through-supplier-collaboration" target="_blank" class="citation-link">https://www.mckinsey.com/capabilities/sustainability/our-insights/sustainability-blog/tackling-scope-3-emissions-through-supplier-collaboration</a>
-                </p>
-                
-                <p>
-                    <strong>Plastic Collective.</strong> "Plastic Credits vs Carbon Credits." <br>
-                    <a href="https://www.plasticcollective.co/plastic-credits-vs-carbon-credits-a-clear-path-to-environmental-impact/" target="_blank" class="citation-link">https://www.plasticcollective.co/plastic-credits-vs-carbon-credits-a-clear-path-to-environmental-impact/</a>
-                </p>
+                <!-- Right Column: Lead Gen Strategy -->
+                <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
+                    <h3 class="text-xl font-bold text-white mb-6">Lead Generation Strategy</h3>
+                    
+                    <div class="space-y-6">
+                        <!-- Strategy 1 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-900/50 flex items-center justify-center border border-emerald-700 text-emerald-400 font-bold">1</div>
+                            <div>
+                                <h4 class="font-bold text-white">The "Sand Sample Kit" Campaign</h4>
+                                <p class="text-sm text-slate-400 mt-1">Send a premium box to local landscapers, golf course superintendents, and cranberry growers containing 3 vials: Coarse (Mulch), Medium (Filtration), and Fine (Sand). <em>Physicality sells quality.</em></p>
+                            </div>
+                        </div>
 
-                <p>
-                    <strong>Salisbury MA.</strong> "Barrier Beach/ Coastal Dune Resident Information" <br>
-                    <a href="https://www.salisburyma.gov/conservation-commission/pages/barrier-beach-coastal-dune-resident-information" target="_blank" class="citation-link">https://www.salisburyma.gov/conservation-commission/pages/barrier-beach-coastal-dune-resident-information</a>
-                </p>
+                        <!-- Strategy 2 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-900/50 flex items-center justify-center border border-emerald-700 text-emerald-400 font-bold">2</div>
+                            <div>
+                                <h4 class="font-bold text-white">The "Sponsor a Dune" Pilot</h4>
+                                <p class="text-sm text-slate-400 mt-1">Identify a small, eroding section of a local public beach. Offer to restore it at cost if a local bank sponsors the material. Use the PR event to launch your "Certified Local Offset" program.</p>
+                            </div>
+                        </div>
 
-                <p>
-                    <strong>Science News.</strong> "Recycled glass could help fend off coastal erosion." <br>
-                    <a href="https://www.sciencenews.org/article/recycled-glass-fend-off-coastal-erosion" target="_blank" class="citation-link">https://www.sciencenews.org/article/recycled-glass-fend-off-coastal-erosion</a>
-                </p>
+                        <!-- Strategy 3 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald-900/50 flex items-center justify-center border border-emerald-700 text-emerald-400 font-bold">3</div>
+                            <div>
+                                <h4 class="font-bold text-white">LinkedIn "Scope 3" Outreach</h4>
+                                <p class="text-sm text-slate-400 mt-1">Target Sustainability Directors at MA-based tech and biotech firms. Do not sell "waste pickup." Sell "Scope 3 Reduction Service with Data Integration."</p>
+                            </div>
+                        </div>
+                    </div>
 
-                <p>
-                    <strong>Georgia Coastal Research Council.</strong> "Use of Pulverized Recycled Glass for Beach Nourishment: A Review." <br>
-                    <a href="https://www.gcrc.uga.edu/wp-content/uploads/2019/10/Review-Use-of-Pulverized-Recycled-Glass-for-Beach-Nourishment_v1.pdf" target="_blank" class="citation-link">https://www.gcrc.uga.edu/wp-content/uploads/2019/10/Review-Use-of-Pulverized-Recycled-Glass-for-Beach-Nourishment_v1.pdf</a>
-                </p>
-
-                <p>
-                    <strong>Mass.gov.</strong> "Beneficial Use Determination or Modification (SW 39-42 & 44)." <br>
-                    <a href="https://www.mass.gov/how-to/sw-39-42-44-beneficial-use-determination-or-modification" target="_blank" class="citation-link">https://www.mass.gov/how-to/sw-39-42-44-beneficial-use-determination-or-modification</a>
-                </p>
-
-                <p>
-                    <strong>Keystone Bio Ag.</strong> "Silica for Plants | Using Silica for Crop Health" <br>
-                    <a href="https://www.keystonebioag.com/article/silica-the-forgotten-nutrient/" target="_blank" class="citation-link">https://www.keystonebioag.com/article/silica-the-forgotten-nutrient/</a>
-                </p>
-
-                <p>
-                    <strong>Futureco Bioscience.</strong> "5 benefits of silicon in plants for export production" <br>
-                    <a href="https://www.futurecobioscience.com/en/benefits-of-silicon-in-plants/" target="_blank" class="citation-link">https://www.futurecobioscience.com/en/benefits-of-silicon-in-plants/</a>
-                </p>
-                
-                 <p>
-                    <strong>Cape Cod Cranberry Growers' Association.</strong> "How Cranberries Grow: Sand Use." <br>
-                    <a href="https://www.cranberries.org/sand-use" target="_blank" class="citation-link">https://www.cranberries.org/sand-use</a>
-                </p>
-
-                 <p>
-                    <strong>Little Leaf Farms.</strong> "Sustainability Fast Facts." <br>
-                    <a href="https://www.littleleaffarms.com/?da_image=sustainability-fast-facts" target="_blank" class="citation-link">https://www.littleleaffarms.com/?da_image=sustainability-fast-facts</a>
-                </p>
-
-                 <p>
-                    <strong>GlassPack.</strong> "Glass Filter Media for Sand Filtered Residential Pools" <br>
-                    <a href="https://glasspack-filter.com/" target="_blank" class="citation-link">https://glasspack-filter.com/</a>
-                </p>
-
-                <p>
-                    <strong>Roly Poly.</strong> "Glass Beads for Weighted Blankets & Crafts" <br>
-                    <a href="https://plasticpellets.com/collections/weighted-glass-beads" target="_blank" class="citation-link">https://plasticpellets.com/collections/weighted-glass-beads</a>
-                </p>
-                
-                 <p>
-                    <strong>Mass.gov.</strong> "Apply for SMRP Recycling Dividends Program Funds." <br>
-                    <a href="https://www.mass.gov/how-to/apply-for-smrp-recycling-dividends-program-funds" target="_blank" class="citation-link">https://www.mass.gov/how-to/apply-for-smrp-recycling-dividends-program-funds</a>
-                </p>
-                 <p>
-                    <strong>RecyclingWorks MA.</strong> "MassDEP's 2026 Recycling & Reuse Business Development Grant Program." <br>
-                    <a href="https://recyclingworksma.com/massdep-recycling-reuse-business-development-grant-program-2026/" target="_blank" class="citation-link">https://recyclingworksma.com/massdep-recycling-reuse-business-development-grant-program-2026/</a>
-                </p>
+                    <div class="mt-8 pt-8 border-t border-slate-700 text-center">
+                        <p class="text-slate-400 text-xs mb-4 uppercase tracking-wide">Available for Download</p>
+                        <a href="technical_report.html" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 px-8 rounded-full transition shadow-lg shadow-emerald-900/50 inline-flex items-center justify-center gap-2 mx-auto transform hover:-translate-y-1">
+                            <i class="fa-solid fa-file-code"></i>
+                            View Technical Report
+                        </a>
+                        <p class="text-slate-500 text-[10px] mt-3">
+                            <span class="text-amber-400 font-bold"><i class="fa-solid fa-triangle-exclamation mr-1"></i> DISCLAIMER:</span> Includes mock/simulated data for demonstration purposes.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <footer class="mt-12 pt-4 border-t border-slate-200 text-center text-xs text-slate-400">
-            <p>Fructify LLC | Program Management & Strategic Sourcing</p>
-        </footer>
-    </div>
+    <!-- NEW SECTION: Project Resources / Downloads Library -->
+    <section class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold text-slate-900 mb-8">Strategic Asset Library</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Download 1: Original Research (UPDATED LINK TO HTML) -->
+                <a href="original_strategy.html" target="_blank" class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md border border-slate-200 transition text-left flex flex-col h-full">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="bg-indigo-50 p-3 rounded-lg group-hover:bg-indigo-100 transition">
+                            <!-- Changed Icon to book/file since it's HTML now -->
+                            <i class="fa-solid fa-file-lines text-indigo-600 text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm">Original Strategy</h4>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4 flex-grow">The comprehensive source document detailing the "Anthropogenic Sand" economic thesis and market research.</p>
+                    <span class="text-xs text-indigo-600 font-semibold inline-block">View Full Strategy &rarr;</span>
+                </a>
+
+                <!-- Download 2: Market Compendium (UPDATED TO ENSURE IT LINKS CORRECTLY) -->
+                <a href="market_research_compendium.html" target="_blank" class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md border border-slate-200 transition text-left flex flex-col h-full">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="bg-blue-50 p-3 rounded-lg group-hover:bg-blue-100 transition">
+                            <i class="fa-solid fa-list-check text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm">Market Summary</h4>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4 flex-grow">Annotated bibliography and feasibility summary with direct links to regulatory bodies.</p>
+                    <span class="text-xs text-blue-600 font-semibold inline-block">View Summary &rarr;</span>
+                </a>
+
+                <!-- Download 3: Technical Specs (UPDATED WITH DISCLAIMER) -->
+                <a href="technical_report.html" target="_blank" class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md border border-slate-200 transition text-left flex flex-col h-full relative overflow-hidden">
+                    <!-- Banner for Mock Data -->
+                    <div class="absolute top-3 right-[-30px] rotate-45 bg-amber-100 text-amber-700 text-[10px] font-bold px-8 py-1 border border-amber-200 shadow-sm">
+                        MOCK DATA
+                    </div>
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="bg-emerald-50 p-3 rounded-lg group-hover:bg-emerald-100 transition">
+                            <i class="fa-solid fa-flask text-emerald-600 text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm">Technical Specs</h4>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4 flex-grow">Engineering data: Sieve analysis and SiO₂ chemical composition. <span class="italic text-amber-600 font-semibold">(Simulated for Demo)</span></p>
+                    <span class="text-xs text-emerald-600 font-semibold inline-block">View Sample Specs &rarr;</span>
+                </a>
+
+                <!-- Download 4: Green Credit Strategy -->
+                <a href="green_credit_strategy.html" target="_blank" class="group bg-white p-6 rounded-xl shadow-sm hover:shadow-md border border-slate-200 transition text-left flex flex-col h-full">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="bg-teal-50 p-3 rounded-lg group-hover:bg-teal-100 transition">
+                            <i class="fa-solid fa-money-bill-trend-up text-teal-600 text-xl"></i>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-sm">Credit Strategy</h4>
+                    </div>
+                    <p class="text-xs text-slate-500 mb-4 flex-grow">Confidential guide to monetizing environmental attributes and leveraging MassDEP loopholes.</p>
+                    <span class="text-xs text-teal-600 font-semibold inline-block">View Strategy &rarr;</span>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-6 md:mb-0">
+                <div class="flex items-center gap-2 mb-2">
+                    <!-- Footer Logo Variant -->
+                    <div class="w-8 h-8 bg-slate-900 rounded-full flex items-center justify-center border border-slate-700">
+                         <i class="fa-solid fa-leaf text-emerald-500 text-sm"></i>
+                    </div>
+                    <span class="font-bold text-xl text-white">Fructify <span class="text-emerald-600">LLC</span></span>
+                </div>
+                <p class="text-sm mt-2 text-slate-500">Program Management & Strategic Implementation.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="https://www.linkedin.com/in/farls/" target="_blank" class="hover:text-emerald-500 transition" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin text-xl"></i>
+                </a>
+                <a href="mailto:mfarley@fructifyme.com" class="hover:text-emerald-500 transition" aria-label="Email">
+                    <i class="fa-solid fa-envelope text-xl"></i>
+                </a>
+            </div>
+        </div>
+        <div class="text-center mt-8 text-xs text-slate-600 border-t border-slate-900 pt-8">
+            &copy; 2024 Fructify LLC. All Rights Reserved. <br>
+            This strategic report is the intellectual property of Fructify LLC, prepared for client implementation.
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
